@@ -39,3 +39,8 @@ const enviromentMapTextures = cubeTextureLoader.load(
         '/textures/environmentMaps/3/nz.jpg'
     ])
 
+/**
+ * Base
+ */
+// Canvas
+const canvas = document.querySelector('canvas.webgl')
