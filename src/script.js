@@ -59,3 +59,36 @@ material.envMap = enviromentMapTextures
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 gui.add(material, 'displacementScale').min(0).max(1).step(0.0001)
+
+
+
+const sphere = new THREE.Mesh(
+    new THREE.SphereBufferGeometry(0.5, 64, 64),
+    material
+)
+sphere.position.x = -1.5
+sphere.geometry.setAttribute(
+    'uv2',
+    new THREE.BufferAttribute(sphere.geometry.attributes.uv.array, 2)
+)
+
+const plane = new THREE.Mesh(
+    new THREE.PlaneBufferGeometry(1, 1, 100, 100),
+    material
+)
+
+plane.geometry.setAttribute(
+    'uv2',
+    new THREE.BufferAttribute(plane.geometry.attributes.uv.array, 2)
+)
+
+const torus = new THREE.Mesh(
+    new THREE.TorusBufferGeometry(0.3, 0.2, 64, 128),
+    material
+)
+torus.position.x = 1.5
+
+torus.geometry.setAttribute(
+    'uv2',
+    new THREE.BufferAttribute(torus.geometry.attributes.uv.array, 2)
+)
