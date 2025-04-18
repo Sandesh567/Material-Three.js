@@ -92,3 +92,7 @@ torus.geometry.setAttribute(
     'uv2',
     new THREE.BufferAttribute(torus.geometry.attributes.uv.array, 2)
 )
+
+
+
+scene.add(sphere, plane, torus)
