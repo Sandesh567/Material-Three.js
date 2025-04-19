@@ -63,7 +63,7 @@ gui.add(material, 'displacementScale').min(0).max(1).step(0.0001)
 
 
 const sphere = new THREE.Mesh(
-    new THREE.SphereBufferGeometry(0.5, 64, 64),
+    new THREE.SphereGeometry(0.5, 64, 64),
     material
 )
 sphere.position.x = -1.5
@@ -73,7 +73,7 @@ sphere.geometry.setAttribute(
 )
 
 const plane = new THREE.Mesh(
-    new THREE.PlaneBufferGeometry(1, 1, 100, 100),
+    new THREE.PlaneGeometry(1, 1, 100, 100),
     material
 )
 
@@ -83,7 +83,7 @@ plane.geometry.setAttribute(
 )
 
 const torus = new THREE.Mesh(
-    new THREE.TorusBufferGeometry(0.3, 0.2, 64, 128),
+    new THREE.TorusGeometry(0.3, 0.2, 64, 128),
     material
 )
 torus.position.x = 1.5
