@@ -124,4 +124,15 @@ scene.add(sphere, plane, torus)
                     const renderer = new THREE.WebGLRenderer({ canvas: canvas }) 
                     renderer.setSize(sizes.width, sizes.height) 
                         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) 
-                
+
+                 /** * Animate */ const clock = new THREE.Clock()  const tick = () => { const elapsedTime = clock.getElapsedTime()  
+                                                                                       //Update Objects
+                                                                                       sphere.rotation.y = 0.1 *elapsedTime plane.rotation.y = 0.1 *elapsedTime torus.rotation.y = 0.1 *elapsedTime  
+                                                                                       sphere.rotation.x = 0.15 *elapsedTime plane.rotation.y = 0.15 *elapsedTime torus.rotation.y = 0.15 *elapsedTime   
+                                                                                       // Update controls 
+                                                                                       controls.update()  
+                                                                                       // Render 
+                                                                                       renderer.render(scene, camera) 
+                                                                                       // Call tick again on the next frame
+                                                                                       window.requestAnimationFrame(tick) }  
+                            tick()
