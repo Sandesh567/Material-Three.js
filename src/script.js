@@ -114,4 +114,14 @@ scene.add(sphere, plane, torus)
 
  /** * Camera */ // 
                 Base camera const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100) camera.position.x = 1 camera.position.y = 1 camera.position.z = 2 scene.add(camera) //Controls 
-                const controls = new OrbitControls(camera, canvas) controls.enableDamping = true                                 
+                const controls = new OrbitControls(camera, canvas) controls.enableDamping = true  
+
+
+
+
+
+                * Renderer *
+                    const renderer = new THREE.WebGLRenderer({ canvas: canvas }) 
+                    renderer.setSize(sizes.width, sizes.height) 
+                        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) 
+                
