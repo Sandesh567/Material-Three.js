@@ -6,3 +6,8 @@ function const parameters ={ color : 0x6381db, spin : () => { gsap.to(mesh.rotat
 const canvas = document.querySelector(’canvas.webgl’)  
 // Scene 
 const scene = new THREE.Scene() 
+
+ /** * Object */ 
+  const geometry = new THREE.BoxGeometry(1, 1, 1) 
+  const material = new THREE.MeshBasicMaterial({ color: parameters.color }) 
+  const mesh = new THREE.Mesh(geometry, material) scene.add(mesh)
