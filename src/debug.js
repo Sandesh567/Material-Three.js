@@ -19,4 +19,11 @@ gui.add(mesh.position,’y’).min(-3) . max(3) .step(0.01) .name(’elevation)
 gui. add(mesh.position,’y’) .min(-3) .max(3) .step(0.01) .name(’elevation’)  
 //making visible and hide the object in the mesh  
 gui .add(mesh,’visible’)  
-gui .add(material,’wireframe’) 
+gui .add(material,’wireframe’)
+
+
+ /** * Sizes */ 
+  const sizes = { 
+    width: window.innerWidth, 
+    height: window.innerHeight 
+  } 
