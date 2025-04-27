@@ -236,4 +236,8 @@ const tick = () => {
     window.requestAnimationFrame(tick)
 }
 
+<<<<<<< HEAD
 tick()
+=======
+tick()
+>>>>>>> e6da32215157f1007b6eb6df686d4c6563dee42d
