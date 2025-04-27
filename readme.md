@@ -1,4 +1,4 @@
-# Three.js
+# Three.js Journey
 
 ## Setup
 
